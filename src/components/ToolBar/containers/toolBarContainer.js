@@ -2,13 +2,13 @@ import { connect } from 'react-redux';
 import ToolBar from '../ToolBar';
 import { actions, selectors } from '../../../modules';
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   searchName: selectors.app.nameSearchSelector(state),
   searchPosition: selectors.app.positionSearchSelector(state),
   searchAge: selectors.app.ageSearchSelector(state),
 });
 
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   setSearchName(searchTerm) {
     dispatch(actions.app.setNameSearch(searchTerm));
   },

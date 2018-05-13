@@ -8,7 +8,6 @@ import 'bulma/css/bulma.min.css';
 import './index.css';
 import rootReducer from './modules';
 import App from './components/App';
-import registerServiceWorker from './registerServiceWorker';
 
 const store = createStore(
   rootReducer,
@@ -23,4 +22,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 );
-registerServiceWorker();

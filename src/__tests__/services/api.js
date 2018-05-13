@@ -1,5 +1,5 @@
 import axios from 'axios';
-import players from '../../__tests-utils__/mockedPlayers';
+import players from '../../../__tests-utils__/mockedPlayers';
 import api from '../../services/api';
 
 const mockedGet = jest.spyOn(axios, 'get');
