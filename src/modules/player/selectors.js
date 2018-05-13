@@ -9,7 +9,7 @@ export const playersFormattedSelector = createSelector(
   playersSelector,
   players => players.map(player => ({
     ...player,
-    age: !player.dateOfBirth ? '' : moment().diff(player.dateOfBirth, 'years'),
+    age: !player.dateOfBirth ? '' : moment().diff(player.dateOfBirth, 'years').toString(),
   })),
 );
 
@@ -31,7 +31,9 @@ export const playersByAgeSelector = createSelector(
   appSelectors.ageSearchSelector,
   (players, ageSearch) => (!ageSearch
     ? players
-    : players.filter(player => player.age === parseInt(ageSearch, 10))),
+    // Search from start of age
+    : players
+      .filter(player => player.age.slice(0, ageSearch.length) === ageSearch)),
 );
 
 // Filter by name
@@ -41,5 +43,6 @@ export const playersFilteredSelector = createSelector(
   (players, nameSearch) => (!nameSearch
     ? players
     : players
-      .filter(player => player.name && player.name.toLowerCase() === nameSearch.toLowerCase())),
+      .filter(player =>
+        player.name && player.name.toLowerCase().includes(nameSearch.toLowerCase()))),
 );

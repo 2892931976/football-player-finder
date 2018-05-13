@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import HeaderBar from '../HeaderBar';
 import ToolBar from '../ToolBar';
 import Table from '../Table';
 
-class App extends Component {
+class App extends PureComponent {
+  componentDidMount() {
+    this.props.fetchPlayers();
+  }
   render() {
     return (
       <div className="container-fluid">
@@ -21,5 +25,9 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  fetchPlayers: PropTypes.func.isRequired,
+};
 
 export default App;
