@@ -5,7 +5,7 @@ export const initialState = {
   players: [],
 };
 
-export const reducer = (state = initialState, { type, ...payload }) => {
+export const reducer = (state = initialState, { type, ...payload } = {}) => {
   switch (type) {
     case SET_PLAYERS: {
       return update(state, {

@@ -11,7 +11,7 @@ export const initialState = {
   ageSearch: '',
 };
 
-export const reducer = (state = initialState, { type, ...payload }) => {
+export const reducer = (state = initialState, { type, ...payload } = {}) => {
   switch (type) {
     case SET_NAME_SEARCH: {
       return update(state, {
