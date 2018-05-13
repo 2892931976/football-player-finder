@@ -21,7 +21,7 @@ export const selectors = {
   player: playerSelectors,
 };
 
-export const reducer = combineReducers({
+export default combineReducers({
   app,
   player,
 });
