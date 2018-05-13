@@ -1,28 +1,37 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import SearchName from './components/SearchName';
+import SearchAge from './components/SearchAge';
+import PositionSelect from './components/PositionSelect';
 
-const ToolBar = () => (
+const ToolBar = ({
+  searchName,
+  searchPosition,
+  searchAge,
+  setSearchName,
+  setSearchPosition,
+  setSearchAge,
+}) => (
   <div className="columns">
     <div className="column">
-      <div className="control">
-        <input className="input" type="text" placeholder="Player name..." />
-      </div>
+      <SearchName searchTerm={searchName} onChange={setSearchName} />
     </div>
     <div className="column">
-      <div className="control">
-        <div className="select is-fullwidth">
-          <select>
-            <option>Select position</option>
-            <option>With options</option>
-          </select>
-        </div>
-      </div>
+      <PositionSelect selected={searchPosition} onChange={setSearchPosition} />
     </div>
     <div className="column">
-      <div className="control">
-        <input className="input" type="number" placeholder="Age..." />
-      </div>
+      <SearchAge searchTerm={searchAge} onChange={setSearchAge} />
     </div>
   </div>
 );
+
+ToolBar.propTypes = {
+  searchName: PropTypes.string.isRequired,
+  searchPosition: PropTypes.string.isRequired,
+  searchAge: PropTypes.string.isRequired,
+  setSearchName: PropTypes.func.isRequired,
+  setSearchPosition: PropTypes.func.isRequired,
+  setSearchAge: PropTypes.func.isRequired,
+};
 
 export default ToolBar;

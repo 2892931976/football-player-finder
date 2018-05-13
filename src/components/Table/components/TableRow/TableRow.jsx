@@ -26,7 +26,7 @@ TableRow.propTypes = {
     name: PropTypes.string,
     position: PropTypes.string,
     nationality: PropTypes.string,
-    age: PropTypes.number,
+    age: PropTypes.string,
     jerseyNumber: PropTypes.number,
     contractUntil: PropTypes.string,
   }).isRequired,
