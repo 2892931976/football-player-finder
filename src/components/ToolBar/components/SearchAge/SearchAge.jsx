@@ -26,9 +26,11 @@ class SearchAge extends PureComponent {
   }
 
   onChange({ target: { value } }) {
-    // Set the validator of ages before set the filter
-    valueChecker(value, this.props.onChange);
-    this.props.onChange(value);
+    if (!value || /^\d+$/.test(value)) {
+      // Set the validator of ages before set the filter
+      valueChecker(value, this.props.onChange);
+      this.props.onChange(value);
+    }
   }
 
   render() {

@@ -8,7 +8,9 @@ class SearchName extends PureComponent {
   }
 
   onChange({ target: { value } }) {
-    this.props.onChange(value);
+    if (!/\d/.test(value)) {
+      this.props.onChange(value);
+    }
   }
 
   render() {
