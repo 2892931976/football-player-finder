@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ToolBar from '../../../components/ToolBar/ToolBar';
-import SearchName from '../../../components/ToolBar/components/SearchName/SearchName';
-import PositionSelect from '../../../components/ToolBar/components/PositionSelect/PositionSelect';
-import SearchAge from '../../../components/ToolBar/components/SearchAge/SearchAge';
+import SearchName from '../../../components/ToolBar/components/SearchName';
+import PositionSelect from '../../../components/ToolBar/components/PositionSelect';
+import SearchAge from '../../../components/ToolBar/components/SearchAge';
 
 describe('Component ToolBar', () => {
   describe('render', () => {

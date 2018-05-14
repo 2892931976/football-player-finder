@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import TableHead from '../../../../components/Table/components/TableHead/TableHead';
+import TableHead from '../../../../components/Table/components/TableHead';
 
 describe('Component TableHead', () => {
   describe('render', () => {
