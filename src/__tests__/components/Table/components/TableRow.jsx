@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import mockedState from '../../../../../__tests-utils__/mockedState';
-import TableRow from '../../../../components/Table/components/TableRow/TableRow';
+import TableRow from '../../../../components/Table/components/TableRow';
 
 describe('Component TableRow', () => {
   describe('render', () => {

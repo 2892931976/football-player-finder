@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PositionSelect from '../../../../components/ToolBar/components/PositionSelect/PositionSelect';
+import PositionSelect from '../../../../components/ToolBar/components/PositionSelect';
 
 describe('Component PositionSelect', () => {
   const mockedProps = {
