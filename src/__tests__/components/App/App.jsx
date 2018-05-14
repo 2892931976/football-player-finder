@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from '../../../components/App/App';
+import App from '../../../components/App';
 import HeaderBar from '../../../components/HeaderBar';
 import ToolBar from '../../../components/ToolBar';
 import Table from '../../../components/Table';
