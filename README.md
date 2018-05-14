@@ -1,3 +1,11 @@
+# Football Player Finder
+
+React app made with bulma.io, redux and redux thunk.
+
+- npm start
+- npm test
+- npm run coverage 
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

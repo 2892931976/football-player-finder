@@ -7,5 +7,8 @@ module.exports = {
     "es6": true,
     "jest": true,
     "node": true
+  },
+  "rules": {
+    "no-confusing-arrow": ["error", {"allowParens": true}]
   }
 };

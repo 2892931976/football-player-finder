@@ -1,21 +1,33 @@
-import React, { Component } from 'react';
-import logo from '../../logo.svg';
-import './App.css';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
+import HeaderBar from '../HeaderBar';
+import ToolBar from '../ToolBar';
+import Table from '../Table';
 
-class App extends Component {
+class App extends PureComponent {
+  componentDidMount() {
+    this.props.fetchPlayers();
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container-fluid">
+        <HeaderBar />
+        <div className="content" style={{ padding: 10 }}>
+          <div className="hero">
+            <div className="hero-body">
+              <h1 className="is-title">Footbal Player Finder</h1>
+            </div>
+          </div>
+          <ToolBar />
+          <Table />
+        </div>
       </div>
     );
   }
 }
+
+App.propTypes = {
+  fetchPlayers: PropTypes.func.isRequired,
+};
 
 export default App;
