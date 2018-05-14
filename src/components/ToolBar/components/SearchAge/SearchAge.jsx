@@ -8,7 +8,7 @@ const valueChecker = (value, func) => {
   }
   valueCheckerTimeout = setTimeout(() => {
     // Only check if the value have more than 1 digit
-    if (value && value.length > 1) {
+    if (value && (value.length > 1 || value > 4)) {
       const age = parseInt(value, 10);
       if (age < 18) {
         func('18');

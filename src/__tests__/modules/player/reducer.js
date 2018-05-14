@@ -1,7 +1,7 @@
 import deepFreeze from 'deep-freeze';
 import { initialState, reducer } from '../../../modules/player';
 import { SET_PLAYERS } from '../../../modules/player/types';
-import mockedData from '../../../__tests-utils__/mockedPlayers';
+import mockedData from '../../../../__tests-utils__/mockedPlayers';
 
 deepFreeze(initialState);
 

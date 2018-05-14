@@ -1,7 +1,7 @@
 import api from '../../../services/api';
 import * as actions from '../../../modules/player/actions';
 import * as effects from '../../../modules/player/effects';
-import mockedData from '../../../__tests-utils__/mockedPlayers';
+import mockedData from '../../../../__tests-utils__/mockedPlayers';
 
 const mockedApi = jest.spyOn(api, 'getAll');
 mockedApi.mockImplementation(() => mockedData);

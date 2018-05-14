@@ -1,6 +1,6 @@
 import * as actions from '../../../modules/player/actions';
 import { SET_PLAYERS } from '../../../modules/player/types';
-import mockedData from '../../../__tests-utils__/mockedPlayers';
+import mockedData from '../../../../__tests-utils__/mockedPlayers';
 
 describe('Module player: actions', () => {
   test('setPlayers', () => {

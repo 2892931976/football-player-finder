@@ -1,5 +1,5 @@
 import deepFreeze from 'deep-freeze';
-import mockedState from '../../../__tests-utils__/mockedState';
+import mockedState from '../../../../__tests-utils__/mockedState';
 import {
   nameSearchSelector,
   ageSearchSelector,
